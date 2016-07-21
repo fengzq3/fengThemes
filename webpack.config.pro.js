@@ -5,7 +5,7 @@
 "use strict";
 var webpack = require('webpack');
 var htmlWebpackPlugin = require('html-webpack-plugin');
-// var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     devtool: false,
@@ -29,8 +29,8 @@ module.exports = {
             }
         }, {
             test: /\.css$/,
-            // loader: ExtractTextPlugin.extract("style-loader","css-loader")
-            loader: 'style-loader!css-loader'
+            loader: ExtractTextPlugin.extract("style-loader","css-loader")
+            // loader: 'style-loader!css-loader'
         }, {
             test: /\.(jpg|png|svg|gif)$/,
             loader: 'url?limit=8192&name=../images/[name].[ext]'
@@ -50,10 +50,10 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
           $: 'jquery',
-          jquery: 'jquery',
-          'window.jquery':'jquery'
+          jQuery: 'jquery',
+          'window.jQuery':'jquery'
         }),
-        // new ExtractTextPlugin("css/[name].[hash:5].css"),
+        new ExtractTextPlugin("style.css"),
         new htmlWebpackPlugin({
             title: "新APP",
             template: 'src/tpl/index.html',
