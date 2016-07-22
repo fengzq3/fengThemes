@@ -2536,8 +2536,8 @@ tbody.collapse.in {
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 160px;
-  padding: 5px 0;
+  min-width: 100%;
+  padding:0;
   margin: 2px 0 0;
   list-style: none;
   font-size: 14px;
@@ -2990,7 +2990,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 10px 20px;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -3618,11 +3618,28 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ffffff;
   background-color: transparent;
 }
+.navbar-inverse .navbar-nav > li > a:after,
+.navbar-inverse .navbar-nav > .active > a:after{
+  content:" ";margin-left:-25px;opacity: 0;
+  position: absolute;height:3px;bottom:-3px;left:50%;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+.navbar-inverse .navbar-nav > li > a:hover::after,
+.navbar-inverse .navbar-nav > li > a:focus::after,
+.navbar-inverse .navbar-nav > .active > a:after,
+.navbar-inverse .navbar-nav > .open > a:after,
+.navbar-inverse .navbar-nav > .active > a:hover::after,
+.navbar-inverse .navbar-nav > .active > a:focus::after {
+  width:50px;background-color: #00c5ff;opacity: 1;
+  -webkit-transform: translate(0,-3px);
+  transform: translate(0,-3px);
+}
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: #080808;
 }
 .navbar-inverse .navbar-nav > .disabled > a,
 .navbar-inverse .navbar-nav > .disabled > a:hover,
