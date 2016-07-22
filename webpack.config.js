@@ -4,7 +4,7 @@
  */
 "use strict";
 var webpack = require('webpack');
-var htmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 // var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -30,10 +30,10 @@ module.exports = {
         }, {
             test: /\.css$/,
             // loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-                loader: 'style-loader!css-loader'
+                loaders: ['style-loader','css-loader'],
         }, {
             test: /\.(jpg|png|svg|gif)$/,
-            loader: 'url?limit=8192&name=../images/[name].[ext]'
+            loader: 'url?limit=8192&name=../img/[name].[ext]'
         }]
     },
     resolve: {
@@ -46,9 +46,9 @@ module.exports = {
             name: 'commons',
             filename: 'js/common.bundle.js'
         }),
-        new htmlWebpackPlugin({
+        new HtmlWebpackPlugin({
             title: 'My wordpress theme!',
-            template: './src/tpl/index.html',
+            template: './src/index.html',
             filename: 'index.html'
         }),
         //link css

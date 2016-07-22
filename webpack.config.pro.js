@@ -4,11 +4,10 @@
  */
 "use strict";
 var webpack = require('webpack');
-var htmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    devtool: false,
     //页面入口
     entry: {
         commons: ['jquery', 'bts'],
@@ -33,7 +32,7 @@ module.exports = {
             // loader: 'style-loader!css-loader'
         }, {
             test: /\.(jpg|png|svg|gif)$/,
-            loader: 'url?limit=8192&name=../images/[name].[ext]'
+            loader: 'url?limit=8192&name=../img/[name].[ext]'
         }]
     },
     //提取公共lib
@@ -54,9 +53,9 @@ module.exports = {
           'window.jQuery':'jquery'
         }),
         new ExtractTextPlugin("style.css"),
-        new htmlWebpackPlugin({
+        new HtmlWebpackPlugin({
             title: "新APP",
-            template: 'src/tpl/index.html',
+            template: 'src/index.html',
             filename: 'index.html'
 
         }),

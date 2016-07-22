@@ -22,14 +22,14 @@ module.exports = function(grunt) {
             }
         },
         copy: {
-            // img: {
-            //     files: [{
-            //         expand: true,
-            //         cwd: 'src/img',
-            //         src: '**/*',
-            //         dest: 'build/img'
-            //     }]
-            // },
+            img: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/img',
+                    src: '**/*',
+                    dest: 'build/img'
+                }]
+            },
             font: {
                 files: [{
                     expand: true,
