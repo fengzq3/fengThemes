@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://v3.bootcss.com/customize/?id=599dbdec1664131a9f9d3b137e361f0b)
- * Config saved to config.json and https://gist.github.com/599dbdec1664131a9f9d3b137e361f0b
+ * Generated using the Bootstrap Customizer (http://v3.bootcss.com/customize/?id=23975b1e9dfc30f03e1bc30b0409ae8f)
+ * Config saved to config.json and https://gist.github.com/23975b1e9dfc30f03e1bc30b0409ae8f
  */
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
@@ -1515,6 +1515,7 @@ output {
   font-size: 14px;
   line-height: 1.42857143;
   color: #555555;
+  background-color: #ffffff;
   background-image: none;
   border: 1px solid #cccccc;
   border-radius: 4px;
@@ -3093,9 +3094,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills > li {
   float: left;
 }
-.nav-pills > li > a {
+/*.nav-pills > li > a {
   border-radius: 4px;
-}
+}*/
 .nav-pills > li + li {
   margin-left: 2px;
 }
@@ -3307,7 +3308,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 50%;
+  border-radius: 4px;
 }
 .navbar-toggle:focus {
   outline: 0;
@@ -3616,7 +3617,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > li > a:focus {
   color: #ffffff;
   background-color: transparent;
-}
+  }
 .navbar-inverse .navbar-nav > li > a:after,
 .navbar-inverse .navbar-nav > .active > a:after{
   content:" ";margin-left:-25px;opacity: 0;
@@ -3624,7 +3625,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
-}
+  }
 .navbar-inverse .navbar-nav > li > a:hover::after,
 .navbar-inverse .navbar-nav > li > a:focus::after,
 .navbar-inverse .navbar-nav > .active > a:after,
@@ -3646,13 +3647,13 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #444444;
   background-color: transparent;
 }
-.navbar-inverse .navbar-toggle {
+/*.navbar-inverse .navbar-toggle {
   border-color: #333333;
-}
-.navbar-inverse .navbar-toggle:hover,
+}*/
+/*.navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
   background-color: #333333;
-}
+}*/
 .navbar-inverse .navbar-toggle .icon-bar {
   background-color: #ffffff;
 }

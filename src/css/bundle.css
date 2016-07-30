@@ -21,7 +21,7 @@ transition: all ease .3s;}
 transition: all .3s;}
 .dropdown.open .caret{-webkit-transform: rotate(180deg); transform: rotate(180deg);}
 
-.nav-search{margin:13px;width:215px;text-align: center;padding-left:13px;border-left:1px solid #3c3c3c;white-space: nowrap;overflow: hidden;}
+.nav-search{display:none;}
 .nav-search-form{position: relative;display:inline-block;}
 .nav-search-form .form-group{margin-bottom:0;}
 .nav-search-form .form-control{background:none;border-color:#9d9d9d;color:#fff;width:34px;visibility: hidden;
@@ -34,16 +34,38 @@ transition: all .5s ease;
     height: 34px;
     width: 34px;}
 
-.nav-search-form.active .form-control,.nav-search-form:hover .form-control,.nav-search-form:focus .form-control{width:200px;visibility: visible;border-color:#fff;background-color:#353535;}
-.nav-search-form.active .nav-search-btn,.nav-search-form:hover .nav-search-btn{border-left: 1px solid #fff;color:#fff;}
+.nav-search-form.active .form-control,.nav-search-form:hover .form-control,.nav-search-form:focus .form-control{width:200px;visibility: visible;border-color:#9d9d9d;background-color:#353535;}
+.nav-search-form.active .nav-search-btn,.nav-search-form:hover .nav-search-btn{border-left: 1px solid #9d9d9d;color:#fff;}
 
 .nav-search-share{display: inline-block;-webkit-transition: all .5s ease;border-radius: 4px;
 transition: all .5s ease;
     line-height:32px;color:#9d9d9d;
     height: 34px;
     width: 34px;}
-.nav-search-share:hover,.nav-search-share:focus{border:1px solid #fff;color:#fff;text-decoration: none;}
+.nav-search-share:hover,.nav-search-share:focus{border:1px solid #9d9d9d;color:#fff;text-decoration: none;}
 
 @media(min-width: 768px){
-    
+    .nav-search{margin:13px;width:215px;text-align: center;padding-left:13px;border-left:1px solid #3c3c3c;white-space: nowrap;overflow: hidden;display:block;}
+
 }
+
+/*移动胶囊导航*/
+.mobile-nav{position: absolute;width:200px;right:-200px;top:60px;bottom:0;background-color:#080808;z-index:2000;-webkit-transform:translate(0,0);transform: translate(0,0);-webkit-transition: all .3s ease;
+-moz-transition: all .3s ease;
+transition: all .3s ease;}
+.mobile-nav.in{-webkit-transform:translate(-200px,0);transform: translate(-200px,0);}
+
+.navbar-toggle{height:44px;width:44px;}
+.navbar-toggle,.navbar-toggle .icon-bar{-webkit-transition: all .3s ease;
+transition: all .3s ease;}
+.navbar-toggle.open{border-radius: 50%;}
+.navbar-toggle.open .icon-bar:nth-child(1){margin-top: 5px;-webkit-transform: rotate(-225deg);transform: rotate(-225deg);}
+.navbar-toggle.open .icon-bar:nth-child(2){opacity: 0;}
+.navbar-toggle.open .icon-bar:nth-child(3){margin-top:-7px;margin-bottom:6px;-webkit-transform: rotate(225deg);transform: rotate(225deg);}
+
+.mobile-nav > ul > li > .nav-stacked a{padding-left:40px;}
+.mobile-nav > ul > li{border-top:1px solid #191919;}
+.mobile-nav > ul > li a{color:#9d9d9d;-webkit-transition: background .3s;transition: background .3s;}
+.mobile-nav > ul li a:hover,.mobile-nav > ul li a:focus,.mobile-nav > ul li.active a:hover,.mobile-nav > ul li.active a:focus
+{border-left:4px solid #00c5ff;margin-left:-4px;background-color:#171717;color:#fff;}
+.mobile-nav > ul li.active a{background-color:#171717;color:#fff;}
