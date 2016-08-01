@@ -52,6 +52,10 @@ transition: all .5s ease;
     .row {margin-left: 0; margin-right: 0;}
 }
 
+/*遮罩层*/
+.shade-full{position: fixed;background-color:rgba(0,0,0,.75);width:100%;height:100%;left:0;top:0;z-index: 1000;display: none;}
+.shade-full.show{display:block;}
+
 /*移动胶囊导航*/
 .mobile-nav{position: fixed;width:200px;right:-200px;top:60px;bottom:0;z-index:2000;-webkit-transform:translate(0,0);transform: translate(0,0);-webkit-transition: all .3s ease;
 -moz-transition: all .3s ease;
