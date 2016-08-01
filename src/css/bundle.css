@@ -48,14 +48,15 @@ transition: all .5s ease;
 
 @media(min-width: 768px){
     .nav-search{margin:13px;width:215px;text-align: center;padding-left:13px;border-left:1px solid #3c3c3c;white-space: nowrap;overflow: hidden;display:block;}
-    .main-list{margin-top:25px; margin-bottom:25px;}
+    .main-list{margin-top:25px;}
     .row {margin-left: 0; margin-right: 0;}
 }
 
 /*移动胶囊导航*/
-.mobile-nav{position: absolute;width:200px;right:-200px;top:60px;bottom:0;background-color:#080808;z-index:2000;-webkit-transform:translate(0,0);transform: translate(0,0);-webkit-transition: all .3s ease;
+.mobile-nav{position: fixed;width:200px;right:-200px;top:60px;bottom:0;z-index:2000;-webkit-transform:translate(0,0);transform: translate(0,0);-webkit-transition: all .3s ease;
 -moz-transition: all .3s ease;
-transition: all .3s ease;}
+transition: all .3s ease;background-color:#080808;}
+
 .mobile-nav.in{-webkit-transform:translate(-200px,0);transform: translate(-200px,0);}
 
 .navbar-toggle{height:44px;width:44px;}
@@ -74,7 +75,7 @@ transition: all .3s ease;}
 .mobile-nav > ul li.active a{background-color:#171717;color:#fff;}
 
 /*主内容列表*/
-
+.main-list{margin-bottom:25px;overflow:hidden;}
 .main-list-item{overflow: hidden;display: block;position: relative;margin:15px 0;background-color:#fff;-webkit-transition: all .5s;
 transition: all .5s;}
 .main-list-item:hover,.main-list-item:focus{text-decoration: none;box-shadow: 0 0 10px 5px #f2fcff;-webkit-transform:transloate3d(0,-2px,0); transform: translate3d(0,-2px,0);}
@@ -92,3 +93,7 @@ transition: all .3s;bottom:0;}
 
 /*more*/
 .page-more{padding-left:15px;padding-right:15px;padding-top:15px;}
+
+/*page foot*/
+.page-foot{background-color:#F6F5F5;border-top:1px solid #eee;padding:10px 0;}
+.page-footer{text-align: center;}
