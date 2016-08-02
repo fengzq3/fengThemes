@@ -35,24 +35,27 @@ $(function () {
         }
     });
     // 移动胶囊导航
-    $mobileNavBtn.on('click', function () {
+    $mobileNavBtn.on('click', closeMobileNav);
+    //点击遮罩层关闭导航
+    function closeMobileNav() {
         if (!$mobileNav.hasClass('in')) {
-            
-            $(this).addClass('open');
+            ShadeL.show(closeMobileNav);
+            $mobileNavBtn.addClass('open');
             $mobileNav.addClass('in');
         } else {
-            
-            $(this).removeClass('open');
+            ShadeL.hide();
+            $mobileNavBtn.removeClass('open');
             $mobileNav.removeClass('in');
         }
-    });
+    }
+
     // shade 层方法
-    const shadeL = {
+    const ShadeL = {
         show: callback => {
             //显示遮罩 并 添加事件监听
-            $shadeLayout.addClass('show').on('click',callback); 
+            $shadeLayout.addClass('show').one('click', callback);
         },
-        hide:()=>{
+        hide: () => {
             $shadeLayout.removeClass('show'); //隐藏遮罩
         }
     }
