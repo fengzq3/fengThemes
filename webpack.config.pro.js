@@ -27,13 +27,16 @@ module.exports = {
                 compact: false
             }
         }, {
-            test: /\.css$/,
-            loader: ExtractTextPlugin.extract("style-loader","css-loader")
-            // loader: 'style-loader!css-loader'
-        }, {
-            test: /\.(jpg|png|svg|gif)$/,
-            loader: 'url?limit=8192&name=../img/[name].[ext]'
-        }]
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+                // loader: 'style-loader!css-loader'
+            }, {
+                test: /\.(jpg|png|gif)$/,
+                loader: 'url-loader?limit=8192'
+            }, {
+                test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
+                loader: "file-loader?name=./fonts/[name].[ext]"
+            }]
     },
     //提取公共lib
     plugins: [
@@ -48,9 +51,9 @@ module.exports = {
             }
         }),
         new webpack.ProvidePlugin({
-          $: 'jquery',
-          jQuery: 'jquery',
-          'window.jQuery':'jquery'
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
         }),
         new ExtractTextPlugin("style.css"),
         new HtmlWebpackPlugin({
@@ -70,9 +73,9 @@ module.exports = {
 
     ],
     resolve: {
-       alias: {
-           bts: './src/js/bootstrap'
-       }
+        alias: {
+            bts: './src/js/bootstrap'
+        }
     }
 
 };

@@ -53,10 +53,10 @@ $(function () {
     const ShadeL = {
         show: callback => {
             //显示遮罩 并 添加事件监听
-            $shadeLayout.addClass('show').one('click', callback);
+            $shadeLayout.addClass('show').off('click').on('click', callback);
         },
         hide: () => {
-            $shadeLayout.removeClass('show'); //隐藏遮罩
+            $shadeLayout.removeClass('show').off('click'); //隐藏遮罩
         }
     }
 

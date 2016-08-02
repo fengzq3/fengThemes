@@ -28,13 +28,16 @@ module.exports = {
                 compact: false
             }
         }, {
-            test: /\.css$/,
-            // loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-                loaders: ['style-loader','css-loader'],
-        }, {
-            test: /\.(jpg|png|svg|gif)$/,
-            loader: 'url?limit=8192&name=../img/[name].[ext]'
-        }]
+                test: /\.css$/,
+                // loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+                loaders: ['style-loader', 'css-loader'],
+            }, {
+                test: /\.(jpg|png|gif)$/,
+                loader: 'url-loader?limit=8192'
+            }, {
+                test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
+                loader: "file-loader?name=./fonts/[name].[ext]"
+            }]
     },
     resolve: {
         alias: {
