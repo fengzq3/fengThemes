@@ -54,6 +54,11 @@ module.exports = {
             template: './src/index.html',
             filename: 'index.html'
         }),
+        new HtmlWebpackPlugin({
+            title: 'My article',
+            template: './src/article.html',
+            filename: 'article.html'
+        }),
         //link css
         // new ExtractTextPlugin("style.css"),
         //全局引入

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role='navigation'>
+            <div class="navbar-heading">
+                <button type="button" class="navbar-toggle" id="mobileNavBtn">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+                <a href="#" class="navbar-brand">标题标题</a>
+            </div>
+            <!-- search -->
+            <div class="nav-search">
+                <form role="form" class="nav-search-form" method="POST" action="#" id="mainSearch">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="输入搜索">
+                    </div>
+                    <button class="nav-search-btn" type="submit"><span class="iconfont icon-fangdajing"></span></button>
+                </form>
+                <a href="#" class="nav-search-share"><span class="iconfont icon-qq"></span></a>
+                <a href="#" class="nav-search-share"><span class="iconfont icon-share"></span></a>
+            </div>
+            <!-- main nav -->
+            <div class="collapse navbar-collapse pull-right" id="feng-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#">栏目1</a></li>
+                    <li class="dropdown js-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉菜单栏目 <b class="caret"></b></a>
+                        <ul class="dropdown-menu navbar-dropdown-menu">
+                            <li><a href="#">Item1</a></li>
+                            <li><a href="#">Item1</a></li>
+                            <li><a href="#">Item1</a></li>
+                            <li><a href="#">Item1</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--移动导航-->
+            <div class="mobile-nav" id="mobileNav">
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">一级栏目</a></li>
+                    <li class="active"><a href="#">阿萨德</a></li>
+                    <li><a href="#">一级栏目</a></li>
+                    <li><a href="#">二级栏目</a>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">二级二级</a></li>
+                            <li><a href="#">二级二级</a></li>
+                            <li><a href="#">二级二级</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--移动 search-->
+            <div class="mobile-search js-mobSearchIco">
+                <span class="mob-search-ico iconfont icon-fangdajing"></span>
+            </div>
+            <form action="#" method="POST" class="mobile-search-form col-xs-8 col-xs-offset-2 js-mobSearch">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="输入搜索">
+                </div>
+                <button class="mobile-search-btn" type="submit"><span class="iconfont icon-fangdajing"></span></button>
+            </form>
+            <!--移动 end-->
+        </nav>
+    </header>
+    <!-- banner -->
+    <div class="article-title">
+        <img src="https://isux.tencent.com/wp-content/uploads/2016/02/20160202111209544.jpg" alt="标题标题标题标题一个测试标题" />
+        <div class="article-des">
+            <!-- 内层 -->
+            <div class="container">
+                <div class="article-des-title">
+                    <h1>标题标题标题标题一个测试标题</h1>
+                    <p>
+                        <small><span class="iconfont icon-rili"></span> 2016.10.22</small>
+                        <small><span class="iconfont icon-discuss"></span>122</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--主内容-->
+    <div class="container">
+        <!--内容部分-->
+        <div class="article-con">
+            <p>本研究在设计师选定的几种字体下，对用户主观偏好的阅读体验进行了视觉绩效的测量，用以确定字色、背景、字号、字距、行距等设计元素的参数值。回顾本文研究结果可以发现，用户在手机阅读中的视距要比电子书阅读视距更近，平均视距30cm，近一半用户视距在10-30cm之间。屏幕大小、视距、年龄对字号、行距、背景、字色等参数均有不同程度的影响。另外，字体在其中起了非常重要的作用（如，兰亭正文36-38pt，汉仪正文34-36pt），不同的字体在不同视距等因素的影响下，会得到不同的结果参数，详见后续视觉同学的分享文章。</p>
+            <h3>2.2 变量控制</h3>
+            <p>字体服务于文本阅读。不论是为阅读设计而选择字体的设计师，还是因文本阅读而反复注视字体的读者，都会在有意或无意间，逐渐形成自己关于字体及文字排版的评价标准。所以通常我们会认为存在人群普遍的视觉认知心理，以及专业设计师通过长期工作经验所获得的综合评估能力，两者之间可能是有差异的，如不同的个体对不同的字体偏好是不同的，对美观性与可用性之间分配的权重是不同的。</p>
+            <h3>2.3 小结与研究展望</h3>
+            <p>本研究采用2*2被试内设计，自变量为阅读视距（水平1：习惯视距，水平2：适当视距-50cm）与手机机型（水平1：iPhone6，水平2：iPhone6plus），各测试通过ABBA平衡顺序效应，每完成一个测试进行主观反馈，并休息5分钟，再进行下一个测试。</p>
+            <p>采用统一的环境光线，及iPhone自适应的屏幕亮度，用户年龄从14-35岁，每篇文章的长度，错别字分布都相对均衡，要求用户在校订测验中保持固定的视距，尽可能快和多的找到错别字写在纸上。</p>
+            <h3>2.2 变量控制</h3>
+            <p>字体服务于文本阅读。不论是为阅读设计而选择字体的设计师，还是因文本阅读而反复注视字体的读者，都会在有意或无意间，逐渐形成自己关于字体及文字排版的评价标准。所以通常我们会认为存在人群普遍的视觉认知心理，以及专业设计师通过长期工作经验所获得的综合评估能力，两者之间可能是有差异的，如不同的个体对不同的字体偏好是不同的，对美观性与可用性之间分配的权重是不同的。</p>
+            <h3>2.3 小结与研究展望</h3>
+            <p>本研究采用2*2被试内设计，自变量为阅读视距（水平1：习惯视距，水平2：适当视距-50cm）与手机机型（水平1：iPhone6，水平2：iPhone6plus），各测试通过ABBA平衡顺序效应，每完成一个测试进行主观反馈，并休息5分钟，再进行下一个测试。</p>
+            <p>采用统一的环境光线，及iPhone自适应的屏幕亮度，用户年龄从14-35岁，每篇文章的长度，错别字分布都相对均衡，要求用户在校订测验中保持固定的视距，尽可能快和多的找到错别字写在纸上。</p>
+            <h3>2.2 变量控制</h3>
+            <p>字体服务于文本阅读。不论是为阅读设计而选择字体的设计师，还是因文本阅读而反复注视字体的读者，都会在有意或无意间，逐渐形成自己关于字体及文字排版的评价标准。所以通常我们会认为存在人群普遍的视觉认知心理，以及专业设计师通过长期工作经验所获得的综合评估能力，两者之间可能是有差异的，如不同的个体对不同的字体偏好是不同的，对美观性与可用性之间分配的权重是不同的。</p>
+            <h3>2.3 小结与研究展望</h3>
+            <p>本研究采用2*2被试内设计，自变量为阅读视距（水平1：习惯视距，水平2：适当视距-50cm）与手机机型（水平1：iPhone6，水平2：iPhone6plus），各测试通过ABBA平衡顺序效应，每完成一个测试进行主观反馈，并休息5分钟，再进行下一个测试。</p>
+            <p>采用统一的环境光线，及iPhone自适应的屏幕亮度，用户年龄从14-35岁，每篇文章的长度，错别字分布都相对均衡，要求用户在校订测验中保持固定的视距，尽可能快和多的找到错别字写在纸上。</p>
+            <div class="clearfix"></div>
+            <hr />
+            <div class="article-info">
+                <div class="article-info-l">
+                    <p><span class="iconfont icon-riqi"></span> 2016.10.22</p>
+                    <p><span class="iconfont icon-lanmu"></span> <a href="#">用户体验</a></p>
+                    <p><span class="iconfont icon-tag"></span> <a href="#">用户</a>、<a href="#">体验</a>、<a href="#">前端</a></p>
+                    <p class="pull-right">
+                        <a href="#"><span class="iconfont icon-discuss"></span>122</a>
+                    </p>
+                </div>
+
+                <div class="article-info-r">
+                    <p><a href="#">上一篇</a></p>
+                    <p><a href="#">下一篇</a></p>
+                </div>
+            </div>
+        </div>
+        <!--推荐部分-->
+        <div class="article-relate">
+            <h3>相关推荐</h3>
+            <div class="article-relate-con">
+                <div class="col-xs-4">
+                    <a href="#">
+                        <img src="https://isux.tencent.com/wp-content/uploads/2016/03/20160303124431993.jpg" alt="标题标题">
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">
+                        <img src="https://isux.tencent.com/wp-content/uploads/2016/03/20160303124431993.jpg" alt="标题标题">
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">
+                        <img src="https://isux.tencent.com/wp-content/uploads/2016/03/20160303124431993.jpg" alt="标题标题">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--footer-->
+    <footer class="page-foot">
+        <div class="container">
+            <div class="page-footer">
+                <p>WorldPress</p>
+                <small><a href="http://semfeng.com">semfeng.com</a> by feng</small>
+            </div>
+        </div>
+    </footer>
+    <!--遮罩-->
+    <div class="shade-full js-shade"></div>
+
+</body>
+
+</html>
