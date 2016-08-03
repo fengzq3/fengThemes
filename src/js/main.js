@@ -9,9 +9,12 @@ $(function () {
     //变量
     let $dropDown = $('.js-dropdown');  //下拉
     let $search = $('#mainSearch'); //搜索
+    let $mobSearchIco = $('.js-mobSearchIco'); //移动搜索图标
+    let $mobSearchForm = $('.js-mobSearch'); //移动搜索框
     let $mobileNav = $('#mobileNav');   //移动导航
     let $mobileNavBtn = $('#mobileNavBtn'); //移动导航按钮
     let $shadeLayout = $('.js-shade');  //遮罩层
+
     //dropdown
     $dropDown.hover(function () {
         $(this).addClass('open');
@@ -59,6 +62,17 @@ $(function () {
             $shadeLayout.removeClass('show').off('click'); //隐藏遮罩
         }
     }
+
+    // 移动search
+    $mobSearchIco.on('click', function () {
+        ShadeL.show(() => {
+            ShadeL.hide();
+            $(this).removeClass('hide');
+            $mobSearchForm.removeClass('show');
+        });
+        $(this).addClass('hide');
+        $mobSearchForm.addClass('show');
+    });
 
     //function END
 })
