@@ -14,6 +14,9 @@ $(function () {
     let $mobileNav = $('#mobileNav');   //移动导航
     let $mobileNavBtn = $('#mobileNavBtn'); //移动导航按钮
     let $shadeLayout = $('.js-shade');  //遮罩层
+    let width = window.innerWidth;  //窗口宽度
+    let height = window.innerHeight;  //窗口高度
+    let $fixed = $('.js-fixed');    //pin功能，固定底部
 
     //dropdown
     $dropDown.hover(function () {
@@ -73,6 +76,19 @@ $(function () {
         $(this).addClass('hide');
         $mobSearchForm.addClass('show');
     });
+
+    // 判断宽度，超过 768 则启用
+    if (width >= 768) {
+        let scTop = $fixed.offset().top;
+        $(window).scroll(function () {
+            let scrollH = $(document).scrollTop();
+            if ((scTop - $fixed.height() - scrollH) > height) {
+                $fixed.addClass('fixed');
+            } else {
+                $fixed.removeClass('fixed');
+            }
+        });
+    }
 
     //function END
 })
