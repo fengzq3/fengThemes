@@ -57,10 +57,14 @@ module.exports = {
         }),
         new ExtractTextPlugin("style.css"),
         new HtmlWebpackPlugin({
-            title: "新APP",
-            template: 'src/index.html',
+            title: 'My wordpress theme!',
+            template: './src/index.html',
             filename: 'index.html'
-
+        }),
+        new HtmlWebpackPlugin({
+            title: 'My article',
+            template: './src/article.html',
+            filename: 'article.html'
         }),
         // removes a lot of debugging code in React
         new webpack.DefinePlugin({
